@@ -1,0 +1,64 @@
+<!--session storage: phiên, mang tính chất ngắn hạn, ko tồn tại lâu dài, kết thúc trong 1 khoảng TG nào đấy-->
+<!--mỗi session trong web có thể hiểu là từ khi trình duyệt mở ra cho đến lúc nó đóng vào-->
+<!--session storage: lưu trừ dữ liệu trong khoảng thời gian từ khi trình duyệt mở chod dến lúc trình duyệt đóng -->
+<!--localStorage: giúp lưu trữ dữ liệu trên trình duyệt -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localStorage</title>
+</head>
+<body>
+    <input type="text" name="new-item" id="new-item">
+    <button id="add-item">Add</button>
+    <button id="delete-item">Delete</button>
+    <ul id="todo-list">
+
+    </ul>
+
+    <script type="text/javascript">
+        var add = document.getElementById('add-item');
+        add.addEventListener('click', addItem);
+        var deleteList = document.getElementById('delete-item');
+        deleteList.addEventListener('click', deleteItem);
+        var input = document.getElementById("new-item");
+        input.addEventListener('change', updateSessionStorage);
+        input.value = sessionStorage.getItem('draft');
+        var dataString = localStorage.getItem('todolist');
+        var todo;
+        if(dataString) {
+            todo = JSON.parse(dataString)
+        } else todo = [];
+
+        function updateSessionStorage() {
+            sessionStorage.setItem('draft', input.value);
+        }
+
+        function addItem() {
+            var newItem = input.value;
+            // add todo array
+            todo.push(newItem);
+            // re-render
+            render();
+            // clearn input
+            input.value = '';
+            localStorage.setItem('todolist', JSON.stringify(todo));
+        }
+
+        function deleteItem() {
+            todo = [];
+            render();
+            localStorage.setItem('todolist', '');
+        }
+
+        function render() {
+            var listHTML = document.getElementById('todo-list');
+            var content = todo.map(function(item) {
+                return '<li>' + item + '</li>';
+            });
+            listHTML.innerHTML = content.join('');
+        }
+        render();
+    </script>
+</body>
+</html>

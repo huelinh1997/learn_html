@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html_id</title>
+	<style>
+		#header {
+			color: black;
+			background-color: lightblue;
+			padding: 30px; 
+		}
+	</style>
+</head>
+<body>
+	<h2 id="header">Hello word</h2>
+	<br>
+	<button onclick="displayResult()">Change text</button>
+	<script>
+		function displayResult() {
+			document.getElementById("header").innerHTML = "Good afternoon!";
+		}
+	</script>
+</body>
+</html>

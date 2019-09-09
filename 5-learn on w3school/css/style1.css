@@ -1,0 +1,43 @@
+body {
+	/* background-image: url('../img/background.jpg'); */
+	background-color: lightgray;
+}
+
+h1 {
+	color: red;
+}
+
+p {
+	color: green;
+}
+
+#p01 {
+	color: green;
+}
+
+#p02 {
+	border: 1px solid powderblue;
+	padding: 30px;
+	margin: 50px;
+	background-color: gray;
+}
+
+p.exp {
+	color: blue;
+}
+
+a:link, a:visited {
+	color: blue;
+	background-color: transparent;
+	text-decoration: none;
+	padding: 20 px 35px 40px;
+	text-align: center;
+	display: inline-block;
+}
+
+a:hover, a:active {
+	color: red;
+	background-color: gray;
+	text-decoration: underline;
+}
+

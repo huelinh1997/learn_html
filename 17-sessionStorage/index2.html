@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo-list</title>
+</head>
+<body>
+    <input type="text" id="new-item">
+    <button id="add-btn">Add</button>
+    <button id="del-btn">Delete</button>
+    <ul id="list-item">
+
+    </ul>
+    <script>
+        var listItem = document.getElementById('list-item');
+        var input = document.getElementById('new-item');
+        var addBtn = document.getElementById('add-btn');
+        var delBtn = document.getElementById('del-btn');
+        var newData = localStorage.getItem('todolist');
+        var todo;
+        if(newData) {
+            todo = JSON.parse(newData);
+        } else todo = [];
+
+        addBtn.addEventListener('click', addItem);
+        delBtn.addEventListener('click', deleteItem);
+        input.addEventListener('change', updateSessionStorage);
+        input.value = sessionStorage.getItem('draft');
+
+        function updateSessionStorage() {
+            sessionStorage.setItem('draft', input.value);
+        }
+
+        function addItem() {
+            todo.push(input.value);
+            render();
+            input.value = '';
+            localStorage.setItem('todolist', JSON.stringify(todo));
+        }
+
+        function deleteItem() {
+            todo  = [];
+            render();
+            localStorage.setItem('todolist', '');
+        }
+
+        function render() {
+            var content = todo.map(function (item) {
+                return '<li>' + item + '</li>'
+            });
+            listItem.innerHTML = content.join('');
+        }
+        render();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/**
+ * 1. Ngoài static-server thì còn có những node package nào có thể tạo 1 web server
+ * Gợi ý: Lên https://www.npmjs.com/ search với từ khoá web server hoặc static server hoặc server
+ * 2. Thử dùng 1 vài công cụ khác static-server để tạo web server
+ * 3. Ghi lại các cách mà bạn đã làm ở bước 2, càng cụ thể càng tốt.
+ * 4. Bạn có biết cách start 1 web server rất nhanh với dòng lệnh như php hoặc python, thử tìm hiểu.
+ * 5. Ghi lại cách mà bạn tìm kiếm ở bước 4
+ * Mục đích của bài tập này giúp cho bạn tập tìm kiếm tài liệu với từ khoá đã biết
+ */
+
+
+
+// 1. Ngoài ra còn có http-server,live-server, server
+// 2.
+// 3. 
+//  ***  Tạo web server với server
+//    B1: npm install server
+//    B2: create a file called index.js with this code:
+      // Include the server in your file
+      const server = require('server');
+      const { get, post } = server.router;
+      
+      // Handle requests to the url "/" ( http://localhost:3000/ )
+      server([
+        get('/', ctx => 'Hello world!')
+      ]);
+//    B3: Execute this in the terminal to get the server started
+//    B4: open your browser on localhost:3000 and you should see 'Hello world!' on your browser.
+
+//  ***  Tạo web server với http-server
+// B1: npm install http-server -g
+// B2: http-server [path] [options]
+// node '/home/dell/Desktop/Learn HTML/2-web-server/node_modules/http-server/bin/http-server'
+// https://www.youtube.com/watch?v=oa9m8321_nw
+// B3: Now you can visit http://localhost:8080 to view your server
+
+//  ***  Tạo web server với live-server
+// B1: npm install live-server -g
+// B2: live-server [path] [options]
+// B3: Now you can visit http://localhost:8080 to view your server
+
+// 4
+// 5. ** start 1 web server rất nhanh với dòng lệnh python
+// B1: install python3
+// B2: cd tới thư mục bạn muốn chạy webserver va go dong lenh: 
+// python3 -m http.server
+// B3: Mặc định SimpleHTTPServer sẽ mở port 8000, nội dung của website trả về sẽ là nội dung của folder bạn mở server, trong trường hợp folder chứa file index.html, nội dung trả về chính là nội dung của file index.html đó. Sau khi mở web server, bạn chỉ cần truy cập vào một trong các địa chỉ sau:
+//    localhost:8000
+//    127.0.0.1:8000
+
+// Trường hợp muốn đổi Port: python3 -m http.server [port]]
+
+// ** start 1 web server rất nhanh với dòng lệnh python
+// B1: install php
+// B2: cd tới thư mục bạn muốn chạy webserver va go dong lenh: 
+//  php -S localhost:[port]
+// B3: truy cap localhost:[port]
+
+BT:
+https://repl.it/@huelinh/AdvancedWorseMicrocode
+https://repl.it/@pvhung/AdvancedWorseMicrocode

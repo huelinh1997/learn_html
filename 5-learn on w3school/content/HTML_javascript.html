@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML_javascript</title>
+</head>
+<body>
+	<script>
+		function on_off(num) {
+			var srcPic;
+			if(num == 1) {
+				srcPic = "../img/pic_bulbon.gif"
+			}
+			else {
+				srcPic = "../img/pic_bulboff.gif"
+			}
+			document.getElementById("image").src = srcPic;
+		}
+	</script>
+	<img src="../img/pic_bulboff.gif" id="image">
+	<p>
+		<button type="button" onclick="on_off(1)">Click on</button>
+		<button type="button" onclick="on_off(0)">Click off</button>
+	</p>
+</body>
+</html>

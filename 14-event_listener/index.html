@@ -1,0 +1,43 @@
+<!--$0.addEventListener (Observer design partern)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Even listener</title>
+</head>
+<body>
+    <input  id="new-item" type="text">
+    <button id="add-btn">Add</button>
+    <ul id="list-item">
+    </ul>
+
+    <script>
+        todo = ['take shower', 'Have a walk', 'Go to bed'];
+        var addbtn = document.getElementById('add-btn');
+        //addbtn.onclick = addItem;
+        addbtn.addEventListener('click', addItem);  // thêm nguwòi nghe sự kiện cho sự kiện click của nút btn
+        // hàm này sẽ thực hiện khi sự kiện được trigger
+        // term: trigger an event, event listener
+        addbtn.addEventListener('click', myFunction);
+
+        function myFunction() {
+            alert("Hello! I am an alert box!");
+        }
+        function addItem() {
+            var input = document.getElementById('new-item');
+            todo.push(input.value);
+            render();
+            input.value = '';
+        }
+
+        function render() {
+            var listItem = document.getElementById('list-item');
+            var content = todo.map(function (item) {
+                return '<li>' + item + '</li>' ;
+            });
+            listItem.innerHTML = content.join('');
+        }
+        render();
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise</title>
+</head>
+<body>
+	<p class="foo">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. </p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p>
+	<p class="foo">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt.</p>
+	<div>dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt.</div>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt.</p>
+	<p class="foo">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt.</p>
+
+	<script type="text/javascript">
+		
+		var x = document.querySelectorAll('p.foo');
+		for(item of x) {
+			var link = document.createElement('a');
+			link.innerHTML = '<a href="https://coders-x.com">CoderTokyo</a>';
+		 	item.append(link);
+		}
+		
+	</script>
+</body>
+</html>

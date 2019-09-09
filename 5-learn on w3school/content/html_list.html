@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>List</title>
+	<link rel="stylesheet" type="text/css" href="../css/style3.css">
+</head>
+<body>
+	<!-- Unordered HTML List - Choose List Item Marker -->
+	<ul style="list-style-type: disc;"> <!-- default style -->
+		<li>Tea</li>
+		<li>Coffee</li>
+		<li>Milk</li>
+	</ul>
+	<ul style="list-style-type: circle;">
+		<li>Tea</li>
+		<li>Coffee</li>
+		<li>Milk</li>
+	</ul>
+	<ul style="list-style-type: square">
+		<li>Tea</li>
+		<li>Coffee</li>
+		<li>Milk</li>
+	</ul>
+	<ul style="list-style-type: none">
+		<li>Tea</li>
+		<li>Coffee</li>
+		<li>Milk</li>
+	</ul>
+
+	<!-- Ordered HTML List - The Type Attribute -->
+	<ol type="1"> <!-- default is type="1", style can be: type="A", type="a", type="I", type="i" -->
+		<li>Tea</li>
+		<li>Coffee</li>
+		<li>Milk</li>
+	</ol>
+	<ol type="1" start="20"> 
+		<li>Tea</li>
+		<li>Coffee</li>
+		<li>Milk</li>
+	</ol>
+
+	<!-- HTML Description Lists -->
+	<dl>
+		<dt>Coffee</dt>
+		<dd>- Hot Coffee</dd>
+		<dd>- Cold Coffee</dd>
+		<dt>Milk</dt>
+		<dd>- Hot milk</dd>
+		<dd>- Cold milk</dd>
+	</dl>
+
+	<!-- Nested HTML Lists -->
+	<ul>
+		<li>Milk</li>
+		<li>Tea</li>
+			<ul>
+				<li>Hot tea</li>
+				<li>Cold tea</li>
+			</ul>
+		<li>Coffee</li>
+	</ul>
+
+	<!-- Horizontal List with CSS -->
+	<ul id="ul_exc">
+		<li id="list_exc"><a href="#home">Home</a></li>
+		<li id="list_exc"><a href="#new">New</a></li>
+		<li id="list_exc"><a href="#contact">Contact</a></li>
+		<li id="list_exc"><a href="#about">About</a></li>
+	</ul>
+</body>
+</html>

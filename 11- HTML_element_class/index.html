@@ -1,0 +1,34 @@
+<!-- HTML Element:
+	* Children				(Element)
+	* textContent			(Node)
+
+	* appendChild() 	(Node)
+	* remove() 				(Element) 
+	* document.createElement(): tao ra 1 html element moi  -->
+<!DOCTYPE html>
+<html lang="en">
+	<head> <!-- document.head -->
+		<meta charset="UTF-8">
+		<title>TODO List</title>
+	</head>
+	<body> <!-- document.body -->
+		<h1>TODO List</h1>
+
+		<ul id="todo-list">
+			<li>Haircut</li>
+			<li>Lunch with Sora</li>
+			<li>Dinner with Maria</li>
+		</ul>
+	</body>
+</html>
+
+<!-- Gõ trên console: $0 để select ra element đang trỏ ở cột element thay vì getElementByID(), đây là cách dùng nhanh 
+	$0.children: select ra element con cua element đang trỏ 
+	$0.textContent: select ra noi dung cua element đang trỏ   
+	$0.textContent = 'abc': gan noi dung cho element đang trỏ 
+	Muon them 1 element vao trong todoList, ta lam nhu sau:
+		var todoList = document.getElementById('todo-list')
+		var newTodo = document.createElement('li') // tao 1 element moi
+		newTodo.textContent = 'Cook tomorrow lunch' // gan noi dung cho element
+		todoList.appendChild(newTodo) // dua element vao cuoi listtodo  
+	$0.remove(): remove element đang trỏ ra khoi DOM-->

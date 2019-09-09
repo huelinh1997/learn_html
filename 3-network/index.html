@@ -1,0 +1,12 @@
+Go google: "what is my ip public address" => ra dia chi IP public (những thiết bị trong cùng 1 mạng wifi sẽ có địa chỉ IP public giống nhau) + dia chi IP local
+hoac cd den thu muc, go ifconfig, se hien ra dia chi IP local
+
+- Trong cung 1 mang LAN, go dia chi IP local:port
+ex: 192.168.1.7:8080 se hien thi ra trang web
+- Muon truy cap khac mang, thuc hien mo cong (Go google: Port forwarding)
+
+** Co 1 cach khac la dung tunnel (duong ham),di thang tu may nay sang may khac, ko can phai mo Port nua
+- su dung cong cu: ngrok: tao 1 duong ham giua may ban va internet, va sau day cho phep cac may khac tai qua duong link day ma ko can phai mo Port
+- truy cap: ngrok.com
+- sau khi cai dat ngrok, ta go: ./ngrok http [port]
+- lay duong link do, may khac mang LAN van xem duoc
